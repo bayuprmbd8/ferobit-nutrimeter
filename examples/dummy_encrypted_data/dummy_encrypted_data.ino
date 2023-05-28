@@ -1,13 +1,21 @@
 /*******************************************
 Author : Bayu PRIAMBODO
-Date   : April 2023
+Date   : May 2023
 Desc   : Library to handle nutrimeter module
 ********************************************/
 
 #include <nutrimeter.h>
-#include <SoftwareSerial.h>
 
-SoftwareSerial NMserial(D1, D2); // RX | TX
+// uncomment the following if you are using software serial
+// #define _SOFTWARESERIAL_
+
+#ifndef _SOFTWARESERIAL_
+  HardwareSerial NMserial(2); //UART2 (ESP32 GPIO16 || GPIO17)
+#else
+  #include <SoftwareSerial.h>
+  SoftwareSerial NMserial(D1, D2); // RX | TX
+#endif
+
 
 NutriMeter nm;
 
