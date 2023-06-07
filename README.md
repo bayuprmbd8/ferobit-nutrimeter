@@ -37,13 +37,21 @@ decoding encrypted data, make sure add '!' mark in the end of data.
 String encryptedData;
 nm.decode(encryptedData + "!");
 ```
-turning on YINMIK BLE-9901 / YINMIK BLE-9909 device
+trigger YINMIK BLE-9901 / YINMIK BLE-9909 device
 ```arduino
 nm.setON();
 ```
-turning off YINMIK BLE-9901 / YINMIK BLE-9909 device
+trigger with delay 200ms YINMIK BLE-9901 / YINMIK BLE-9909 device
 ```arduino
-nm.setOFF();
+nm.setON200();
+```
+trigger with delay 300ms YINMIK BLE-9901 / YINMIK BLE-9909 device
+```arduino
+nm.setON300();
+```
+trigger with delay 400ms YINMIK BLE-9901 / YINMIK BLE-9909 device
+```arduino
+nm.setON400();
 ```
 In case there is no response of the module. sending reset command to clear the cache.
 ```arduino
