@@ -19,7 +19,9 @@ class NutriMeter
     float getTDS();     // Method
     char* getStatus();  // Method
     int setON();        // Method
-    int setOFF();       // Method
+    int setON200();     // Method
+    int setON300();     // Method
+    int setON400();     // Method
     int reset();        // Method
     int available();    // Method
     int available(bool printMode);    // Method
