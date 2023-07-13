@@ -1,6 +1,6 @@
 /*******************************************
 Author : Bayu PRIAMBODO
-Date   : June 2023
+Date   : July 2023
 Desc   : Library to handle nutrimeter module
 ********************************************/
 
@@ -62,6 +62,12 @@ void loop()
         break;
       case 34:
         nm.setON400(); //Correct Command Data
+        break;
+      case 22:
+		Serial.println(nm.getStatusOnly()); //Correct Command Data
+        break;
+      case 44:
+		Serial.println(nm.getVersion());  //Correct Command Data
         break;
       case 0:
         nm.reset(); //Correct Command Data

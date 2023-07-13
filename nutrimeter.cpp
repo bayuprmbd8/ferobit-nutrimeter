@@ -1,6 +1,6 @@
 /*******************************************
 Author : Bayu PRIAMBODO
-Date   : June 2023
+Date   : July 2023
 Desc   : Library to handle nutrimeter module
 ********************************************/
 
@@ -127,6 +127,32 @@ int NutriMeter::reset()
     return 1;
   }
   return 0;
+}
+
+char* NutriMeter::getStatusOnly()
+{
+  buffStream->print("$$22!");
+  buff = buffStream->readString();
+  if( buff.substring(0, 4).equals("000A") )
+  {
+    return "ON";
+  }
+  else if ( buff.substring(0, 4).equals("000B") )
+  {
+    return "OFF";
+  }
+  else
+  {
+    return "Error Status";
+  }
+  
+  return "ERR";
+}
+
+char* NutriMeter::getVersion()
+{
+  buffStream->print("$$44!");
+  return buffStream->readString();
 }
 
 void NutriMeter::decode(String inData)

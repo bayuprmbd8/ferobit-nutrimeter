@@ -77,6 +77,14 @@ get result of TDS measurement
 ```arduino
 nm.getTDS();
 ```
+get status only
+```arduino
+nm.getStatusOnly();
+```
+get firmware version
+```arduino
+nm.getVersion();
+```
 
 ## Contributing
 

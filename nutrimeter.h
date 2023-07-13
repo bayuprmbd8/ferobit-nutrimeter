@@ -13,20 +13,22 @@ Desc   : Library to handle nutrimeter module
 class NutriMeter
 {
   public:
-    NutriMeter();       // Constructor
-    float getPH();      // Method
-    float getTemp();    // Method
-    float getTDS();     // Method
-    char* getStatus();  // Method
-    int setON();        // Method
-    int setON200();     // Method
-    int setON300();     // Method
-    int setON400();     // Method
-    int reset();        // Method
-    int available();    // Method
-    int available(bool printMode);    // Method
+    NutriMeter();           // Constructor
+    float getPH();          // Method
+    float getTemp();        // Method
+    float getTDS();         // Method
+    char* getStatus();      // Method
+	char* getStatusOnly();  // Method
+	char* getVersion();     // Method
+    int setON();            // Method
+    int setON200();         // Method
+    int setON300();         // Method
+    int setON400();         // Method
+    int reset();            // Method
+    int available();        // Method
+    int available(bool printMode);   // Method
     void decode(String inData);      // Method
-    void init(Stream *softSerial);      // Method
+    void init(Stream *softSerial);   // Method
   private:
     int string2Hex(String dataIn, int iStart, int iEnd);
 
