@@ -19,7 +19,7 @@ class NutriMeter
     float getTDS();         // Method
     char* getStatus();      // Method
 	char* getStatusOnly();  // Method
-	char* getVersion();     // Method
+	String getVersion();    // Method
     int setON();            // Method
     int setON200();         // Method
     int setON300();         // Method

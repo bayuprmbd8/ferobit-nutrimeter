@@ -64,10 +64,10 @@ void loop()
         nm.setON400(); //Correct Command Data
         break;
       case 22:
-		Serial.println(nm.getStatusOnly()); //Correct Command Data
+        Serial.println(nm.getStatusOnly()); //Correct Command Data
         break;
       case 44:
-		Serial.println(nm.getVersion());  //Correct Command Data
+        Serial.println(nm.getVersion());  //Correct Command Data
         break;
       case 0:
         nm.reset(); //Correct Command Data

@@ -149,7 +149,7 @@ char* NutriMeter::getStatusOnly()
   return "ERR";
 }
 
-char* NutriMeter::getVersion()
+String NutriMeter::getVersion()
 {
   buffStream->print("$$44!");
   return buffStream->readString();
