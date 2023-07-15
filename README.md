@@ -85,6 +85,9 @@ get firmware version
 ```arduino
 nm.getVersion();
 ```
+## Hardware
+Wiring Diagram of FEROBIT NUTRIBOARD
+![Alt text](/WIRING-DIAGRAM.jpg "Wiring Diagram")
 
 ## Contributing
 
