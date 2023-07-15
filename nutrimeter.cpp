@@ -62,11 +62,11 @@ char* NutriMeter::getStatus()
 {
   if(flagDecode)
   {
-    if( buff.substring(20, 24).equals("000A") )
+    if( buff.substring(20, 24).equals("0A") )
     {
       return "ON";
     }
-    else if ( buff.substring(20, 24).equals("000B") )
+    else if ( buff.substring(20, 24).equals("0B") )
     {
       return "OFF";
     }
